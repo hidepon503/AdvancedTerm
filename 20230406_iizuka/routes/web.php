@@ -22,3 +22,10 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+Route::get('/default', function () {
+    return view('layouts.default');
+});
+Route::get('/index', function () {
+    return view('index');
+});

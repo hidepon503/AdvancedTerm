@@ -1,9 +1,35 @@
-<div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
-    <div>
-        {{ $logo }}
-    </div>
+<style>
+.register_card{
+    width:30%;
+    height:auto;
+    display:flex;
+    border-radius:15px;
+    flex-direction:column;
+    justify-content:center;
+    background-color:#FFFFFF;
 
-    <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
-        {{ $slot }}
+}
+.card_header{
+    width:100%;
+    height:10vh;
+    padding:0 20px 0 20px;
+    background-color:#465DF3;
+    display:flex;
+    align-items:center;
+    border-radius:15px 15px 0 0;
+}
+.register_card_contents{
+    width:100%;
+    padding:1rem 2rem 1rem 2rem ;
+}
+
+</style>
+
+<div class="register_card"> 
+    <div class="card_header">
+      {{ $logo }}
+    </div>
+    <div class="register_card_contents">
+      {{ $slot }}
     </div>
 </div>
