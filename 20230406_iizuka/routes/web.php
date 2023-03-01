@@ -29,3 +29,15 @@ Route::get('/default', function () {
 Route::get('/index', function () {
     return view('index');
 });
+Route::get('/thanks', function () {
+    return view('thanks');
+});
+Route::get('/done', function () {
+    return view('done');
+});
+Route::get('/detail', function () {
+    return view('detail');
+});
+Route::get('/mypage', function () {
+    return view('mypage');
+});

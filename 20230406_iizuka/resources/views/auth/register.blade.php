@@ -33,19 +33,19 @@
 
             <!-- Name -->
             <div class="register_card_item">
-                <img src="{{asset('/img/icon/username.png')}}" alt="" class="register_card_item_img">
+                <img src="{{asset('/img/icon/username.png')}}" alt="アイコン" class="register_card_item_img">
                 <x-input class="register_card_item_form" type="text" name="name" :value="old('name')" placeholder="Username" required autofocus />
             </div>
 
             <!-- Email Address -->
             <div class="register_card_item">
-                <img src="{{asset('/img/icon/email.png')}}" alt="" class="register_card_item_img">
+                <img src="{{asset('/img/icon/email.png')}}" alt="アイコン" class="register_card_item_img">
                 <x-input id="email" class="register_card_item_form" type="email" name="email" :value="old('email')" placeholder="Email" required />
             </div>
 
             <!-- Password -->
             <div class="register_card_item">
-                <img src="{{asset('/img/icon/password.png')}}" alt="" class="register_card_item_img">
+                <img src="{{asset('/img/icon/password.png')}}" alt="アイコン" class="register_card_item_img">
                 <x-input id="password" class="register_card_item_form" 
                                 type="password"
                                 name="password"

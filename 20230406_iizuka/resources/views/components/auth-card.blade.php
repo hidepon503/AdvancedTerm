@@ -1,6 +1,7 @@
 <style>
 .register_card{
     width:30%;
+    margin-top:20vh;
     height:auto;
     display:flex;
     border-radius:15px;

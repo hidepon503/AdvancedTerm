@@ -19,6 +19,7 @@
 <style>
   body{
     font:46px;
+    background-color:#EEEEEE;
   }
   header{
     width:100%;
@@ -50,19 +51,16 @@
     color:#455df3;
   }
   .index_header_search{
-    width:50%;
+    width:60%;
     height:15vh;
     display:flex;
-    justify-content:center;
+    justify-content:flex-end;
     align-items:center;
-
   }
   .container{
     width:100%;
-    height:85vh;
-    background-color:#EEEEEE;
     display:flex;
-    padding:0 5vw 0 5vw;
+    padding:1rem 5vw 0 5vw;
     justify-content:center;
     align-items:center;
   }
