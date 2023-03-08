@@ -1,7 +1,6 @@
 <style>
   .wrapper{
     width:100%;
-    border:solid red 3px;
     display:flex;
     justify-content:space-between;
     align-items:flex-start;
@@ -9,7 +8,6 @@
 
   .reserve_block{
     width:40%;
-    border:solid blue 3px;
     display:flex;
     flex-direction:column;
     margin:0 3rem 1rem 0;
@@ -18,7 +16,6 @@
   .reserve_block_title{}
   .reserve_block_list{
     width:100%;
-    border:green solid  5px;
     display:flex;
     flex-direction:column;
   }
@@ -26,9 +23,9 @@
     width:100%;
     height:35vh;
     margin-top:1rem;
+    border-radius:15px;
     padding:1.5rem 1.5rem;
     background-color:#455df3;
-    border-radius:15px;
     font-size:1.3rem;
     color:#FFFFFF;
   }
@@ -70,7 +67,6 @@
   
   .favorits_block{
     width:50%; 
-    border:solid blue 2px;   
   }
   .favorits_block_user_name{
     margin-bottom:1rem;
@@ -80,7 +76,6 @@
   }
   .favorits_block_shop_box{
     width:100%;
-    border:solid blue 2px;  
     display:flex;
     flex-wrap:wrap;
     align-content:flex-start;

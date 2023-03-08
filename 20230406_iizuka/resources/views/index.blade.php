@@ -25,7 +25,7 @@
     width:110%;
     display:flex;
     flex-wrap:wrap;
-    justify-content:center;
+    justify-content:;
     align-content:flex-start;
   }
   .shop_card{
@@ -40,7 +40,7 @@
     width:100%;
     height:50%;
     size:cover;
-    border-radius:15px 15px 0;
+    border-radius:15px 15px 0 0;
   }
   .card_about{
     width:100%;
@@ -82,117 +82,28 @@
 @endsection
 @section('container')   
   <div class="wrapper">
-    <div class="shop_card">
-      <div class="card_item">
-        <img src="https://coachtech-matter.s3-ap-northeast-1.amazonaws.com/image/sushi.jpg" alt="イメージ画像" class="card_item_img">
-      </div>
-      <div class="card_about">
-        <h2>仙人</h2>
-        <p><span>#東京都</span> <span>#寿司</span></p>
-        <div class=card_button>
-          <div class="about_box">
-            <form action="" method="get" class="card_about_form" ><!--アクション未定義-->
-              @csrf
-              <input type="submit" name="restaurants_id" class="about_button" value="詳しくみる">
-            </form>
+    @foreach($restaurants as $restaurant)
+      <div class="shop_card">
+        <div class="card_item">
+          <img src="https://coachtech-matter.s3-ap-northeast-1.amazonaws.com/image/sushi.jpg" alt="イメージ画像" class="card_item_img">
+          <!--imageテーブルにurlカラムを作成し、restaurantテーブル内のカラムとforeignキーにして{{$restaurant->url}}で写真のパスを代入しよう-->
+        </div>
+        <div class="card_about">
+          <h2>{{$restaurant->name}}</h2>
+          <p><span>#{{$restaurant->area}}</span> <span>#{{$restaurant->genre}}</span></p>
+          <div class=card_button>
+            <div class="about_box">
+              <form action="/detail" method="get" class="card_about_form" >
+                <!--アクション未定義-->
+                @csrf
+                <input type="hidden" name="id" class="about_button" value="{{$restaurant->id}}">
+                <button class="about_button">詳しく見る</button>
+              </form>
+            </div>
+            <button>♡</button>
           </div>
-          <button>♡</button>
         </div>
       </div>
-    </div>
-    <div class="shop_card">
-      <div class="card_item">
-        <img src="https://coachtech-matter.s3-ap-northeast-1.amazonaws.com/image/sushi.jpg" alt="イメージ画像" class="card_item_img">
-      </div>
-      <div class="card_about">
-        <h2>仙人</h2>
-        <p><span>#東京都</span> <span>#寿司</span></p>
-        <div class=card_button>
-          <div class="about_box">
-            <form action="" method="get" class="card_about_form" ><!--アクション未定義-->
-              @csrf
-              <input type="submit" name="restaurants_id" class="about_button" value="詳しくみる">
-            </form>
-          </div>
-          <button>♡</button>
-        </div>
-      </div>
-    </div>
-    <div class="shop_card">
-      <div class="card_item">
-        <img src="https://coachtech-matter.s3-ap-northeast-1.amazonaws.com/image/sushi.jpg" alt="イメージ画像" class="card_item_img">
-      </div>
-      <div class="card_about">
-        <h2>仙人</h2>
-        <p><span>#東京都</span> <span>#寿司</span></p>
-        <div class=card_button>
-          <div class="about_box">
-            <form action="" method="get" class="card_about_form" ><!--アクション未定義-->
-              @csrf
-              <input type="submit" name="restaurants_id" class="about_button" value="詳しくみる">
-            </form>
-          </div>
-          <button>♡</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="shop_card">
-      <div class="card_item">
-        <img src="https://coachtech-matter.s3-ap-northeast-1.amazonaws.com/image/sushi.jpg" alt="イメージ画像" class="card_item_img">
-      </div>
-      <div class="card_about">
-        <h2>仙人</h2>
-        <p><span>#東京都</span> <span>#寿司</span></p>
-        <div class=card_button>
-          <div class="about_box">
-            <form action="" method="get" class="card_about_form" ><!--アクション未定義-->
-              @csrf
-              <input type="submit" name="restaurants_id" class="about_button" value="詳しくみる">
-            </form>
-          </div>
-          <button>♡</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="shop_card">
-      <div class="card_item">
-        <img src="https://coachtech-matter.s3-ap-northeast-1.amazonaws.com/image/sushi.jpg" alt="イメージ画像" class="card_item_img">
-      </div>
-      <div class="card_about">
-        <h2>仙人</h2>
-        <p><span>#東京都</span> <span>#寿司</span></p>
-        <div class=card_button>
-          <div class="about_box">
-            <form action="" method="get" class="card_about_form" ><!--アクション未定義-->
-              @csrf
-              <input type="submit" name="restaurants_id" class="about_button" value="詳しくみる">
-            </form>
-          </div>
-          <button>♡</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="shop_card">
-      <div class="card_item">
-        <img src="https://coachtech-matter.s3-ap-northeast-1.amazonaws.com/image/sushi.jpg" alt="イメージ画像" class="card_item_img">
-      </div>
-      <div class="card_about">
-        <h2>仙人</h2>
-        <p><span>#東京都</span> <span>#寿司</span></p>
-        <div class=card_button>
-          <div class="about_box">
-            <form action="" method="get" class="card_about_form" ><!--アクション未定義-->
-              @csrf
-              <input type="submit" name="restaurants_id" class="about_button" value="詳しくみる">
-            </form>
-          </div>
-          <button>♡</button>
-        </div>
-      </div>
-    </div>
-
+    @endforeach
   </div>
 @endsection

@@ -15,6 +15,7 @@
   width:2rem;
   height:2rem;
   background-color:#FFFFFF;
+  border-radius:5px;
  }
  .detail_block_title{
   margin-left:1rem;
@@ -102,7 +103,7 @@
 @section('container')  
 <div class="detail_block">
   <div class="detail_block_header">
-    <a href="/index"><button class="detail_block_back-button"><</button></a>
+    <a href="/"><button class="detail_block_back-button"><</button></a>
     <h2 class="detail_block_title">仙人</h2>
   </div>
   <div class="detail_block_item">

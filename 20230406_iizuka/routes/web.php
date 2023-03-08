@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ReseController;
+use App\Http\Controllers\RegisteredUserController;
+use App\Http\Controllers\AuthenticatedSessionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,22 +16,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/',[ReseController::class,'index']);
+//Route::get('/index', function () {return view('index');});
+Route::get('/register',[RegisteredUserController::class,'create']);
+Route::post('/register',[RegisteredUserController::class,'store']);
+Route::get('/login',[AuthenticatedSessionController::class, 'create']);
+Route::post('/login',[AuthenticatedSessionController::class, 'store']);
+Route::post('/logout',[AuthenticatedSessionController::class, 'destroy'])->middleware(['auth'])->name('logout');
 
 require __DIR__.'/auth.php';
 
-Route::get('/default', function () {
-    return view('layouts.default');
-});
-Route::get('/index', function () {
-    return view('index');
-});
+
 Route::get('/thanks', function () {
     return view('thanks');
 });
